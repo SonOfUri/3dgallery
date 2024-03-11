@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
-    <link rel="icon" href="/static/img/logo-glow.PNG">
+    <link rel="icon" href="/static/img/logo-black.PNG">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,33 @@
 </head>
 
 <body class="">
+    <style>
+        /* style.css */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #010310f8;
+            /* White background, you can change this */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            /* Ensure it's above other content */
+        }
+    </style>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player
+            src="https://lottie.host/6f90db56-1e23-47f2-8527-a11a97283fca/ZlNdWiX91s.json" background="none"
+            speed="1" style="width: 300px; height: 300px" loop  autoplay direction="1"
+            mode="normal"></lottie-player>
+    </div>
+
+
     <div id="main">
 
         <div id="photo-menu">
@@ -112,7 +139,13 @@
 
                 /* The .element is a class of the HTML element you want to hide the scrollbar for */
             </style>
-            <p>Welcome to HASH AI</p>
+            <h1>Welcome to HASH AI</h1>
+            <a href="">
+                <button style="font-size: 20px;">
+                    Learn More
+                </button>
+            </a>
+            <br><br>
             <p>Drag, scroll, or click the elements above. <i id="pause-button" class="fas fa-pause"></i></p>
             <button id="sphere">SPHERE</button>
             <button id="helix">HELIX</button>
@@ -458,7 +491,7 @@
                     "instagram_link": "https://t.me/",
                     "title": "Hash AI Hardware Rig"
                 },
-                 {
+                {
                     "alt": "Hash AI",
                     "date": "2024",
                     "fpath": "static/img/img (36).webp",
@@ -498,7 +531,7 @@
                     "instagram_link": "https://t.me/",
                     "title": "Hash AI Hardware Rig"
                 },
-                
+
                 {
                     "alt": "Hash AI",
                     "date": "2024",
@@ -602,6 +635,14 @@
                     "id": 48,
                     "instagram_link": "https://t.me/",
                     "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (1).webp",
+                    "id": 48,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
                 }
             ]);
             animate();
@@ -689,8 +730,8 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="navbar-collapse text-right collapse" id="navbarNav" style="">
-            <a class="navbar-brand" href="/home">
-                <img src="./static/img/logo-glow.PNG" alt="" width="50">
+            <a class="navbar-brand" href="#">
+                <img src="./static/img/logo-white.PNG" alt="" width="50">
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item ">
@@ -748,8 +789,19 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <script>
+        // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.getElementById('preloader').style.display = 'none';
+            }, 30000); // 30000 milliseconds = 30 seconds
+        });
 
-</body><chatgpt-sidebar data-gpts-theme="light"></chatgpt-sidebar><chatgpt-sidebar-popups
-    data-gpts-theme="light"></chatgpt-sidebar-popups>
+    </script>
+
+
+
+
+</body>
 
 </html>
