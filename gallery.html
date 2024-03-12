@@ -1,0 +1,999 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>HASH AI</title>
+    <meta name="twitter:title" content="HASH AI">
+    <meta property="og:title" content="HASH AI">
+
+
+
+    <meta name="description" content="Hash AI - Revolutionizing Cryptocurrency Mining with AI Technology.">
+    <meta name="twitter:description" content="Hash AI - Revolutionizing Cryptocurrency Mining with AI Technology.">
+    <meta name="og:description" content="Hash AI - Revolutionizing Cryptocurrency Mining with AI Technology.">
+
+
+    <meta name="author" content="Hash AI - Revolutionizing Cryptocurrency Mining with AI Technology">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Hash AI - Revolutionizing Cryptocurrency Mining with AI Technology">
+    <meta property="og:url" content="">
+
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="icon" href="/static/img/logo-black.PNG">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <style>
+        /* style.css */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #010310f8;
+            /* White background, you can change this */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            /* Ensure it's above other content */
+        }
+
+
+        #load {
+            position: absolute;
+            width: 600px;
+            height: 36px;
+            left: 50%;
+            top: 40%;
+            margin-left: -300px;
+            overflow: visible;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
+        }
+
+        #load div {
+            position: absolute;
+            width: 20px;
+            height: 36px;
+            opacity: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            animation: move 2s linear infinite;
+            -o-animation: move 2s linear infinite;
+            -moz-animation: move 2s linear infinite;
+            -webkit-animation: move 2s linear infinite;
+            transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            color: #fff;
+        }
+
+        #load div:nth-child(2) {
+            animation-delay: 0.2s;
+            -o-animation-delay: 0.2s;
+            -moz-animation-delay: 0.2s;
+            -webkit-animation-delay: 0.2s;
+        }
+
+        #load div:nth-child(3) {
+            animation-delay: 0.4s;
+            -o-animation-delay: 0.4s;
+            -webkit-animation-delay: 0.4s;
+            -webkit-animation-delay: 0.4s;
+        }
+
+        #load div:nth-child(4) {
+            animation-delay: 0.6s;
+            -o-animation-delay: 0.6s;
+            -moz-animation-delay: 0.6s;
+            -webkit-animation-delay: 0.6s;
+        }
+
+        #load div:nth-child(5) {
+            animation-delay: 0.8s;
+            -o-animation-delay: 0.8s;
+            -moz-animation-delay: 0.8s;
+            -webkit-animation-delay: 0.8s;
+        }
+
+        #load div:nth-child(6) {
+            animation-delay: 1s;
+            -o-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -webkit-animation-delay: 1s;
+        }
+
+        #load div:nth-child(7) {
+            animation-delay: 1.2s;
+            -o-animation-delay: 1.2s;
+            -moz-animation-delay: 1.2s;
+            -webkit-animation-delay: 1.2s;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+                opacity: 0;
+            }
+
+            35% {
+                left: 41%;
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            65% {
+                left: 59%;
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                -moz-transform: rotate(-180deg);
+                -webkit-transform: rotate(-180deg);
+                -o-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes move {
+            0% {
+                left: 0;
+                opacity: 0;
+            }
+
+            35% {
+                left: 41%;
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            65% {
+                left: 59%;
+                -moz-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                -moz-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes move {
+            0% {
+                left: 0;
+                opacity: 0;
+            }
+
+            35% {
+                left: 41%;
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            65% {
+                left: 59%;
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+        }
+
+        @-o-keyframes move {
+            0% {
+                left: 0;
+                opacity: 0;
+            }
+
+            35% {
+                left: 41%;
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            65% {
+                left: 59%;
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                -o-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="load">
+            <div style="font-size: 20px;">G</div>
+            <div style="font-size: 20px;">N</div>
+            <div style="font-size: 20px;">I</div>
+            <div style="font-size: 20px;">D</div>
+            <div style="font-size: 20px;">A</div>
+            <div style="font-size: 20px;">O</div>
+            <div style="font-size: 20px;">L</div>
+        </div>
+    </div>
+
+
+    <div id="main">
+
+        <div id="photo-menu">
+            <style>
+                #pause-button:hover {
+                    cursor: pointer;
+                }
+
+                * {
+
+                    font-family: "Play", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+
+
+                /* CSS */
+                .button-89 {
+                    --b: 3px;
+                    /* border thickness */
+                    --s: .45em;
+                    /* size of the corner */
+                    --color: #373B44;
+
+                    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+                    color: var(--color);
+                    --_p: var(--s);
+                    background:
+                        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+                    transition: .3s linear, color 0s, background-color 0s;
+                    outline: var(--b) solid #0000;
+                    outline-offset: .6em;
+                    font-size: 16px;
+
+                    border: 0;
+
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+                }
+
+                .button-89:hover,
+                .button-89:focus-visible {
+                    --_p: 0px;
+                    outline-color: var(--color);
+                    outline-offset: .05em;
+                }
+
+                .button-89:active {
+                    background: var(--color);
+                    color: #fff;
+                }
+
+                /* For Chrome, Safari, and Opera */
+                *::-webkit-scrollbar {
+                    display: none;
+                    /* This hides the scrollbar */
+                }
+
+                /* For Internet Explorer, Edge, and Firefox */
+                * {
+                    -ms-overflow-style: none;
+                    /* For Internet Explorer and Edge */
+                    scrollbar-width: none;
+                    /* For Firefox */
+                }
+
+                /* The .element is a class of the HTML element you want to hide the scrollbar for */
+            </style>
+            <h1>Welcome to HASH AI</h1>
+            <a href="">
+                <button style="font-size: 20px;">
+                    Learn More
+                </button>
+            </a>
+            <br><br>
+            <p>Drag, scroll, or click the elements above. <i id="pause-button" class="fas fa-pause"></i></p>
+            <button id="sphere">SPHERE</button>
+            <button id="helix">HELIX</button>
+            <button id="grid">GRID</button>
+            <button id="table">TABLE</button>
+
+
+
+        </div>
+
+        <script type="text/javascript" src="/static/js/urlParams.js"></script>
+        <script type="module">
+            import { init, animate } from "/static/js/photography/photoDisplay.js";
+            $('#photoDisplayModal').on("hidden.bs.modal", function () {
+                removeUrlParam("id");
+            });
+            init([
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (1).webp",
+                    "id": 1,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (2).webp",
+                    "id": 2,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (3).webp",
+                    "id": 3,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (4).webp",
+                    "id": 4,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (5).webp",
+                    "id": 5,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (6).webp",
+                    "id": 6,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (7).webp",
+                    "id": 7,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (8).webp",
+                    "id": 8,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (9).webp",
+                    "id": 9,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (10).webp",
+                    "id": 10,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (11).webp",
+                    "id": 11,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (12).webp",
+                    "id": 12,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                // {
+                //     "alt": "Hash AI",
+                //     "date": "2024",
+                //     "fpath": "static/img/gif1.gif",
+                //     "id": 12,
+                //     "instagram_link": "https://t.me/",
+                //     "title": "Hash AI Hardware Rig"
+                // },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (13).webp",
+                    "id": 13,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (14).webp",
+                    "id": 14,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (15).webp",
+                    "id": 15,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (16).webp",
+                    "id": 16,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (17).webp",
+                    "id": 17,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (18).webp",
+                    "id": 18,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (19).webp",
+                    "id": 19,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (20).webp",
+                    "id": 20,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (21).webp",
+                    "id": 21,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (22).webp",
+                    "id": 22,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (23).webp",
+                    "id": 23,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (24).webp",
+                    "id": 24,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                //  {
+                //     "alt": "Hash AI",
+                //     "date": "2024",
+                //     "fpath": "static/img/gif2.gif",
+                //     "id": 12,
+                //     "instagram_link": "https://t.me/",
+                //     "title": "Hash AI Hardware Rig"
+                // },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (25).webp",
+                    "id": 25,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (26).webp",
+                    "id": 26,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (27).webp",
+                    "id": 27,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (28).webp",
+                    "id": 28,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                // {
+                //     "alt": "Hash AI",
+                //     "date": "2024",
+                //     "fpath": "static/img/gif3.gif",
+                //     "id": 12,
+                //     "instagram_link": "https://t.me/",
+                //     "title": "Hash AI Hardware Rig"
+                // },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (29).webp",
+                    "id": 29,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (30).webp",
+                    "id": 30,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (31).webp",
+                    "id": 31,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (32).webp",
+                    "id": 32,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (33).webp",
+                    "id": 33,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (34).webp",
+                    "id": 34,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (35).webp",
+                    "id": 35,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (36).webp",
+                    "id": 36,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (37).webp",
+                    "id": 37,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (38).webp",
+                    "id": 38,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (36).webp",
+                    "id": 36,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (37).webp",
+                    "id": 37,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (38).webp",
+                    "id": 38,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (39).webp",
+                    "id": 39,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (40).webp",
+                    "id": 40,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (37).webp",
+                    "id": 37,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (38).webp",
+                    "id": 38,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (39).webp",
+                    "id": 39,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (40).webp",
+                    "id": 40,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                // {
+                //     "alt": "Hash AI",
+                //     "date": "2024",
+                //     "fpath": "static/img/gif4.gif",
+                //     "id": 12,
+                //     "instagram_link": "https://t.me/",
+                //     "title": "Hash AI Hardware Rig"
+                // },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (41).webp",
+                    "id": 41,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (42).webp",
+                    "id": 42,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (43).webp",
+                    "id": 43,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (44).webp",
+                    "id": 44,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (45).webp",
+                    "id": 45,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (46).webp",
+                    "id": 46,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (47).webp",
+                    "id": 47,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (48).webp",
+                    "id": 48,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                },
+                {
+                    "alt": "Hash AI",
+                    "date": "2024",
+                    "fpath": "static/img/img (1).webp",
+                    "id": 48,
+                    "instagram_link": "https://t.me/",
+                    "title": "Hash AI Hardware Rig"
+                }
+            ]);
+            animate();
+            // Add view=id to URL on View click
+            $(document).ready(function () {
+                // If URL contains view query param open respective modal on page load
+                let id = getUrlParam('id');
+                if (id) {
+                    $("#photo" + id).click();
+                }
+            });
+
+            // Previous/next button
+            $(".fa-angle-left").on("click", function () {
+                let id = parseInt(getUrlParam('id'));
+                $("#myModal").modal('hide');
+                removeUrlParam("id");
+                id--;
+                $("#photo" + id).click();
+            });
+            $(".fa-angle-right").on("click", function () {
+                let id = parseInt(getUrlParam('id'));
+                $("#myModal").modal('hide');
+                removeUrlParam("id");
+                id++;
+                $("#photo" + id).click();
+            });
+        </script>
+        <script type="module" src="/static/js/photography/buttons.js"></script>
+
+        <!-- Modal -->
+        <div class="modal fade" id="photoDisplayModal" tabindex="-1" role="dialog"
+            aria-labelledby="photoDisplayModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="photoDisplayModalLabel">HASH AI</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-date">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>2024</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn fab fa-instagram fa-lg float-right" target="_blank"
+                                    style="display: none; opacity: 0;"></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <img src="static/img/img (1).webp">
+                    </div>
+                    <div class="modal-buttons">
+                        <i class="fas fa-angle-left float-left" style="display: block;"></i>
+                        <i class="fas fa-angle-right float-right" style="display: block;"></i>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            // HACK: This pushes the footer lower on the contact page if it's
+            // on mobile but isn't a permanent solution as it needs the images
+            // to load first and just isn't a good solution overall
+            window.addEventListener('load', function () {
+                if (window.innerWidth < 640) {
+                    var footer = document.getElementById("footer");
+                    footer.style.marginTop = "9em";
+                }
+            })
+
+        </script>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top container" style="background-color: transparent;">
+        <button class="navbar-toggler text-right collapsed" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="navbar-collapse text-right collapse" id="navbarNav" style="">
+            <a class="navbar-brand" href="#">
+                <img src="./static/img/logo-white.PNG" alt="" width="50">
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        var transparent = true;
+        var hamburgerButton = document.querySelector("nav button");
+        var navBar = document.getElementsByTagName("nav")[0];
+
+        // Dynamically make collapsible navbar transparent or opaque on hamburger press
+        hamburgerButton.addEventListener("click", function () {
+            if (transparent) {
+                navBar.style.backgroundColor = "rgb(113,86,139)";
+            } else {
+                setTimeout(function () { navBar.style.backgroundColor = "transparent"; }, 350);
+            }
+            transparent = !transparent;
+        });
+    </script>
+    <div id="footer">
+        <footer>
+            <div class="page-footer-follow">
+                <ul class="social-icons">
+                    <li><a href="#" rel="nofollow noopener noreferrer" target="_blank"><i
+                                class="fab fa-fw fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#" rel="nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-github"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="#" rel="nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-telegram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="#" rel="nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="mailto:#" rel="nofollow noopener noreferrer"> <i class="fa fa-envelope"
+                                aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright" style="color: #fff;">
+                © 2024 Copyright. Powered by <a href="#" target="_blank">Hash AI</a>.
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // script.js
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.getElementById('preloader').style.display = 'none';
+            }, 30000); // 30000 milliseconds = 30 seconds
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>
